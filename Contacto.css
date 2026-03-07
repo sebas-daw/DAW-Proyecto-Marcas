@@ -1,0 +1,146 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* Fondo general */
+body.contacto {
+    background-image: url("multimedia/imagen/vintage-grunge.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/******************/
+/******************/
+
+/*seccion Titulo*/
+.contactoTitulo {
+    background-image: url("multimedia/imagen/grunge-paper.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.contactoTitulo::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.contactoTitulo h1 {
+    position: relative;
+    color: white;
+    font-size: 3rem;
+    text-shadow: 2px 2px 10px black;
+}
+
+/******************/
+/******************/
+
+/*seccion Ayuda*/
+.contactoAyuda {
+    background-color: rgb(20, 21, 21);
+    margin: 60px auto;
+    padding: 50px;
+    width: 70%;
+    border-radius: 10px;
+    text-align: center;
+    color: aliceblue;
+}
+
+.contactoAyuda h2 {
+    margin-bottom: 30px;
+}
+
+.contactoAyuda a {
+    color: darkred;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contactoAyuda a:hover {
+    color: rgb(243, 243, 5, 0.777);
+    transition: 0.3s;
+}
+
+/******************/
+/******************/
+
+/*formulario*/
+.formContacto {
+    background-color: rgb(20, 21, 21);
+    margin: 60px auto;
+    padding: 50px;
+    width: 70%;
+    border-radius: 10px;
+    color: aliceblue;
+}
+
+.formContacto h3 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.formContacto form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.formContacto label {
+    font-weight: bold;
+}
+
+.formContacto input,
+.formContacto textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+}
+
+.formContacto textarea {
+    resize: vertical;
+}
+
+/*botón*/
+.formContacto button {
+    margin-top: 10px;
+    padding: 12px;
+    border: none;
+    border-radius: 6px;
+    background-color: darkred;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.formContacto button:hover {
+    background-color: rgb(243, 243, 5, 0.777);
+    transition: 0.3s;
+}
+
+/******************/
+/******************/
+
+/*media query*/
+@media (max-width: 768px) {
+
+    .contactoAyuda,
+    .formContacto {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .contactoTitulo h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+}

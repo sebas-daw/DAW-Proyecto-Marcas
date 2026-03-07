@@ -1,0 +1,229 @@
+/*General*/
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main>section p {
+    padding: 0 20px
+}
+
+body.terceraPrueba {
+    background-image: url(multimedia/imagen/Exorcismo.Almansa.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/************************/
+/************************/
+
+/*índice de la prueba*/
+.indice {
+    background-image: url("multimedia/imagen/Banner.Exorcismo.SinTitulo.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.indice::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.indice-contenido {
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+.indice h1 {
+    font-size: 3.7rem;
+    text-shadow: 2px 2px 10px black;
+}
+
+/*titulo*/
+.indice h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2.3rem;
+}
+
+/*cajas*/
+.infoCaja {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2.3rem;
+}
+
+.caja {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 1rem;
+    background-color: rgba(255, 255, 255, 0.73);
+    min-width: 200px;
+}
+
+/*******************/
+/*******************/
+
+/*Secciones generales*/
+section {
+    border: 1px solid;
+    background-color: rgba(20, 21, 21, 0.988);
+    margin: 60px 0;
+}
+
+.centro {
+    margin-top: 3rem;
+    padding: 3.5rem;
+    text-align: center;
+}
+
+.centro p {
+    color: aliceblue;
+    font-size: 1.3rem;
+}
+
+.izquierda,
+.derecha {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 10%;
+}
+
+.izquierda {
+    flex-direction: row;
+}
+
+.derecha {
+    flex-direction: row-reverse;
+}
+
+.izquierda p,
+.derecha p {
+    flex: 1;
+    text-align: center;
+    color: aliceblue;
+    font-size: 1.3rem;
+}
+
+.imagen {
+    flex: 1;
+}
+
+.imagen img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/******************/
+/******************/
+
+/*Reserva*/
+.reserva {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.reserva form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.reserva label {
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: large;
+    color: aliceblue;
+}
+
+.reserva input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 8px;
+}
+
+.reserva button {
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: darkred;
+    color: white;
+}
+
+.reserva button:hover {
+    background-color: rgba(243, 243, 5, 0.777);
+    transition: 0.3s;
+}
+
+/******************/
+/******************/
+
+/*Boton para volver al índice*/
+.volverArriba {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: black;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+
+    /*opacidad al 0 para que sea invisible y más adelante aparezca la flecha mediante JS*/
+    opacity: 0;
+}
+
+.volverArriba.visible {
+    opacity: 1;
+}
+
+/******************/
+/******************/
+
+/*media query*/
+@media (max-width: 768px) {
+
+    .izquierda,
+    .derecha {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .izquierda p,
+    .derecha p {
+        text-align: center;
+    }
+
+    .infoCaja {
+        flex-direction: column;
+        align-items: center;
+    }
+}

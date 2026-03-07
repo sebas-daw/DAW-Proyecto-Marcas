@@ -1,12 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LaCripta EscapeRooms - Contacto</title>
     <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    
+    <link rel="stylesheet" href="Contacto.css">
+<body class="contacto">
+    <header>
+
+    </header>
+
+    <main>
+        <section class="contactoTitulo">
+            <h1>Escape Rooms - Contacto</h1>
+        </section>
+
+        <section class="contactoAyuda">
+            <h2>¿Necesitas ayuda? ¡Contacta con nosotros!</h2>
+            <p>
+                Email:
+                <a href="mailto:LaCriptaEscapeRooms@gmail.com">LaCriptaEscapeRooms@gmail.com</a>
+            </p>
+
+            <p>
+                Teléfono:
+                <a href="tel:+34666846649">(+34) 666 846 649</a>
+            </p>
+        </section>
+
+        <section class="formContacto">
+            <h3>Envíanos un mensaje</h3>
+
+            <form action="Contacto.html" method="get">
+
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="mensaje">¡Cuéntanos!</label>
+                <textarea name="mensaje" id="mensaje" rows="5"></textarea>
+
+                <button type="submit">Enviar</button>
+
+            </form>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
 </body>
 </html>

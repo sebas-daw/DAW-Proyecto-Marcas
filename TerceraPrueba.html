@@ -9,16 +9,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LaCripta EscapeRooms - El excorcimo de Almansa</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="TerceraPrueba.css">
 </head>
 
-<body>
+<body class="terceraPrueba">
     <header>
         <!--Aquí deberá de ir un header que sea compatible con todos los htmls's. Lo mismo para el footer-->
     </header>
 
     <main>
-        <section>
-            <h2>El excorcimo de Almansa</h2>
+        <section class="indice">
+            <div class="indice-contenido">
+                <h1>El excorcismo de Almansa</h1>
+            </div>
+        </section>
+
+        <div class="infoCaja">
+            <div class="caja">Dificultad: Media - Alta</div>
+            <div class="caja">Número de jugadores: 3 - 6</div>
+            <div class="caja">Duración aproximada: 70 minutos</div>
+        </div>
+
+        <section class="centro">
             <p>
                 Dicen que, en una antigua casa a las afueras de Almansa, se realizó un exorcismo prohibido hace más de
                 un siglo.
@@ -30,38 +42,65 @@
             </p>
         </section>
 
-        <section>
-            <article>
-                <p>
-                    Hace más de cien años, un exorcismo maldito intentó liberar a un espíritu oscuro que había poseído a
-                    un habitante de Almansa.
-                    El ritual fue interrumpido, dejando al demonio atrapado entre nuestro mundo y el suyo, corrompiendo
-                    todo a su alrededor.
-                    Como investigadores de lo oculto, deberéis adentraros en la casa sellada, descifrar símbolos
-                    antiguos, reconstruir el ritual y decidir si completáis el exorcismo… o si huis antes de que sea
-                    demasiado tarde.
-                    Cada decisión tendrá consecuencias.
-                    La fe será puesta a prueba.
-                    Y no todos saldrán siendo los mismos.
-                </p>
+        <section class="izquierda">
+            <p>
+                Hace más de cien años, un exorcismo maldito intentó liberar a un espíritu oscuro que había poseído a un
+                habitante de Almansa.
+                El ritual fue interrumpido, dejando al demonio atrapado entre nuestro mundo y el suyo, corrompiendo todo
+                a su alrededor.
+            </p>
 
-                <ul class="info">
-                    <li>Temática: Terror y misterio.</li>
-                    <li>Duración estimada: 1 hora.</li>
-                    <li>Dificultad: Media-alta.</li>
-                    <li>Jugadores: 3-6 persona.s</li>
-                </ul>
-
-                <div class="imagen">
-                    <img src="multimedia/imagen/Exorcismo.Almansa.png" alt="Exorcismo">
-                </div>
-            </article>
+            <div class="imagen">
+                <img src="multimedia/imagen/Exorcismo1Phasmo.webp" alt="Exorcismo">
+            </div>
         </section>
+
+        <section class="derecha">
+            <p>
+                Como investigadores de lo oculto, deberéis adentraros en la casa sellada, descifrar símbolos antiguos,
+                reconstruir el ritual y decidir si completáis el exorcismo… o si huis antes de que sea demasiado tarde.
+
+            </p>
+
+            <div class="imagen">
+                <img src="multimedia/imagen/Exorcismo2Phasmo.webp" alt="Exorcismo">
+            </div>
+        </section>
+
+        <section class="izquierda">
+            <p>
+                Cada decisión tendrá consecuencias.
+                La fe será puesta a prueba.
+                Y no todos saldrán siendo los mismos.
+            </p>
+
+            <div class="imagen">
+                <img src="multimedia/imagen/Exorcismo3.png" alt="Exorcismo">
+            </div>
+        </section>
+
+        <!--Me gustaría que se mostrara el calendario al completo y no en una barra. Investigarlo mas adelante-->
+        <section class="reserva">
+            <form action="TerceraPrueba.html" method="get">
+                <!--Lo correcto, supongo, que sería con metodo post y que se envié el resultado a un archivo.php. Pero como no vemos eso hasta el año que viene, lo dejo con GET-->
+                <label for="fecha">Selecciona una fecha</label>
+                <input type="date" id="fecha" name="fecha" required>
+                <button type="submit">Reservar ahora</button>
+            </form>
+        </section>
+
+        <a href="#" class="volverArriba" id="botonArriba">↑</a> <!--a su debido momento se pondrá una imagen-->
+
     </main>
 
     <footer>
 
     </footer>
+
+    <script src="TerceraPrueba.JS">
+        /*Para que aparezca la flecha que te devuelve arriba del todo*/
+
+    </script>
 </body>
 
 </html>
