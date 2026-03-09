@@ -79,12 +79,21 @@
             </div>
         </section>
 
-        <!--Me gustaría que se mostrara el calendario al completo y no en una barra. Investigarlo mas adelante-->
         <section class="reserva">
             <form action="TerceraPrueba.html" method="get">
                 <!--Lo correcto, supongo, que sería con metodo post y que se envié el resultado a un archivo.php. Pero como no vemos eso hasta el año que viene, lo dejo con GET-->
                 <label for="fecha">Selecciona una fecha</label>
                 <input type="date" id="fecha" name="fecha" required>
+
+                <label for="personas">Número de personas</label>
+                <input type="number" id="personas" name="personas" min="3" max="6" value="3" required>
+
+                <label for="total">Precio total</label>
+                <input type="text" id="total" name="total" value="90,00 €" readonly>
+
+                <p>Precio: 30€ por persona, IVA incluido.</p>
+                <p><strong>No hay opción a reembolso una vez pasado el plazo de juego.</strong></p>
+
                 <button type="submit">Reservar ahora</button>
             </form>
         </section>
@@ -97,10 +106,7 @@
 
     </footer>
 
-    <script src="TerceraPrueba.JS">
-        /*Para que aparezca la flecha que te devuelve arriba del todo*/
-
-    </script>
+    <script src="TerceraPrueba.JS"></script>
 </body>
 
 </html>

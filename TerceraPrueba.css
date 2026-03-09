@@ -55,8 +55,11 @@ body.terceraPrueba {
 }
 
 .indice h1 {
+    font-family: 'Creepster';
     font-size: 3.7rem;
-    text-shadow: 2px 2px 10px black;
+    color: #ffae00;
+    text-transform: uppercase;
+    animation: fuego 1.5s infinite alternate;
 }
 
 /*titulo*/
@@ -99,6 +102,7 @@ section {
 
 .centro p {
     color: aliceblue;
+    font-family: 'Creepster';
     font-size: 1.3rem;
 }
 
@@ -122,6 +126,7 @@ section {
 .izquierda p,
 .derecha p {
     flex: 1;
+    font-family: 'Creepster';
     text-align: center;
     color: aliceblue;
     font-size: 1.3rem;
@@ -129,6 +134,19 @@ section {
 
 .imagen {
     flex: 1;
+    /*para la funcion para JS*/
+    opacity: 0;
+    transform: translate(50px);
+    /*desplaza la imagen 50 pixeles*/
+    transition: all 0.6s ease;
+    /*all=cualquier propiedad; ease= velocidad de la animacion, de lento a rapido*/
+}
+
+.imagen.mostrar {
+    /*Para funcion JS*/
+    opacity: 1;
+    transform: translateY(0);
+    /*vuelve a su posicion original*/
 }
 
 .imagen img {
@@ -165,6 +183,7 @@ section {
     padding: 10px;
     font-size: 1rem;
     border-radius: 8px;
+    text-align: center;
 }
 
 .reserva button {
@@ -181,6 +200,13 @@ section {
     transition: 0.3s;
 }
 
+.reserva p {
+    color: white;
+}
+
+.reserva #total , .reserva #personas {
+    width: 5.6rem;
+}
 /******************/
 /******************/
 
@@ -200,8 +226,9 @@ section {
     opacity: 0;
 }
 
-.volverArriba.visible {
+.volverArriba-visible {
     opacity: 1;
+    transition: 0.6s;
 }
 
 /******************/
@@ -225,5 +252,37 @@ section {
     .infoCaja {
         flex-direction: column;
         align-items: center;
+    }
+}
+
+/*Buscando información sobre crear animaciones en JavaScript
+he descubierto que se hace en CSS mediante
+@Keyframes*/
+
+@keyframes fuego {
+    0% {
+        text-shadow:
+            0 0 5px #ffae00,
+            0 0 10px #ff7b00,
+            0 0 20px #ff3c00,
+            0 0 40px #ff0000;
+    }
+
+    50% {
+        text-shadow:
+            0 0 10px #ffd000,
+            0 0 20px #ff9d00,
+            0 0 30px #ff5000,
+            0 0 50px #ff0000;
+        ;
+    }
+
+    100% {
+        text-shadow:
+            0 0 5px #ffae00,
+            0 0 15px #ff7b00,
+            0 0 25px #ff3c00,
+            0 0 45px #ff0000;
+        ;
     }
 }
