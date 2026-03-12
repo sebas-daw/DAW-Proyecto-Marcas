@@ -14,12 +14,33 @@
 </head>
 
 <body>
-    <div class="marco">
+     <div class="Contenedor">
+            <header class="nav">
+                <div class="estructuraNav">
+                <div class="logo">
+                    <img src="multimedia/imagenesMaría/Logo.png" alt="imagen Logo">
+                </div>
+                <nav class="opcionesNav">
+                    <ul class="menu"> <!--Creo que me he complicado de mas, voy a intentar hacerlo de otra forma-->
+                        <li><a href="index.html">Inicio</a></li>
+                        <li class="desplegableAventuras">
+                            <a href="index.html#1">Aventuras</a>
+                                <ul class="desplegado">
+                                    <li class="rojo"><a href="PrimeraPrueba.html">Oscuridad del Castillo</a></li>
+                                    <li class="azul"><a href="SegundaPrueba.html">El susurro de las aguas</a></li>
+                                    <li class="lila"><a href="TerceraPrueba.html">Exorcismo de Almansa</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="Contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>
+               
+            </header>
+        </div> 
+    <div class="viñeta">
         <img src="multimedia/imagen/Viñeta.png" alt="Marco">
     </div>
-    <header><!-- Cabecera generica por añadir-->
 
-    </header>
     <main>
         <section class="principal"><!-- Presentacion e imagen de fondo-->
 
@@ -97,8 +118,15 @@
 
         </section>
     </main>
-    <footer><!-- Pie de pagina generica por añadir-->
-
+    <footer>
+        <div class="contenidoFooter">
+            <img src="multimedia/imagenesMaría/Logo.png" alt="">
+            <p class="fraseInvitadora">¿Serás tu el elegido? ¿Tienes lo que hace falta?</p>
+            <p>Almansa, calle Corredera n.4.</p>
+            <p>(+34) 647 76 83 48</p>
+            <a class="mail" href="mailto:info@lacriptaroom.com">info@lacriptaroom.com</a>
+            <p>@2026 LaCripta. Todos los derechos reservados.</p>
+        </div>
     </footer>
 </body>
 

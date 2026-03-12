@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Maria Amengual Rigo">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaCripta - Escape Rooms</title>
+    <link rel="stylesheet" href="MainYSegundaPrueba.css">
+    <script defer src="IndexYSegundaPrueba.js"></script>
+   
+</head>
+<body>
+    <div class="pagina" id="index">
+        <div class="viñeta" id="viñeta">
+            <img src="multimedia/imagenesMaría/Viñeta.png" alt="viñeta">    
+        </div>
+        
+        <div class="Contenedor">
+            <header class="nav">
+                <div class="estructuraNav">
+                <div class="logo">
+                    <img src="multimedia/imagenesMaría/Logo.png" alt="imagen Logo">
+                </div>
+                <nav class="opcionesNav">
+                    <ul class="menu"> <!--Creo que me he complicado de mas, voy a intentar hacerlo de otra forma-->
+                        <li><a href="#">Inicio</a></li>
+                        <li class="desplegableAventuras">
+                            <a href="#1">Aventuras</a>
+                                <ul class="desplegado">
+                                    <li class="rojo"><a href="PrimeraPrueba.html">Oscuridad del Castillo</a></li>
+                                    <li class="azul"><a href="SegundaPrueba.html">El susurro de las aguas</a></li>
+                                    <li class="lila"><a href="TerceraPrueba.html">Exorcismo de Almansa</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="Contacto.html">Contacto</a></li>
+                    </ul>
+                </nav>   
+            </header>
+        </div> 
+            <!--Aquí vamos a intentar hacer el carrusel-->
+            <section class="carrusel">
+                <button class="flecha flechaIzquierda">&#60;</button>    
+                <!-- Primera portada del carrusel-->
+                <article class="diapositiva">
+                <img class="capaFondo" src="multimedia/imagenesMaría/FondoCastillo.png">
+                <img class="capaArriba" src="multimedia/imagenesMaría/Silueta.png">
+                    
+                    <div class="contenido">
+                        <span class="subtitulo">Categoría: Thriller/Acción</span>
+                        <h1> La oscuridad del Castillo</h1>
+                        <p>Cuando la peste devora la ciudad, solo quienes se atreven a cruzar la oscuridad
+                        pueden aspirar a un nuevo amanecer.
+                        </p>
+                        <button>Más información</button>
+                    </div>
+                </article>
+                <button class="flecha flechaDerecha">&#62;</button>
+            </section>
+
+            <div class="separador">
+                <img src="multimedia/imagenesMaría/Separador.JPG" alt="imagen que separa el carrusel y las secciones">
+            </div>
+            <section class="seccion" id="1">
+                <img src="multimedia/imagenesMaría/SeccionCastillo.png" class="imagenFo">
+                <div class="info">
+                    <h2>Oscuridad del Castillo</h2>
+                    <a href="PruebaPantano.html" >Más información</a>
+                </div>
+                
+            </section>
+            <section class="seccion">
+                <img src="multimedia/imagenesMaría/SeccionPantano.png" class="imagenFo">
+                <div class="info">
+                    <h2>El susurro de las aguas</h2>
+                    <a href="PruebaPantano.html" >Más información</a>
+                </div>
+                
+            </section>
+            <section class="seccion">
+                
+                <img src="multimedia/imagenesMaría/SeccionExorcismo.png" class="imagenFo">
+                <div class="info">
+                    <h2>Exorcismo de Almansa</h2> 
+                    <a href="PruebaPantano.html" >Más información</a>
+                </div>
+            
+            </section>
+        </div>
+    </div>
+    <footer>
+        <div class="contenidoFooter">
+            <img src="multimedia/imagenesMaría/Logo.png" alt="">
+            <p class="fraseInvitadora">¿Serás tu el elegido? ¿Tienes lo que hace falta?</p>
+            <p>Almansa, calle Corredera n.4.</p>
+            <p>(+34) 647 76 83 48</p>
+            <a class="mail" href="mailto:info@lacriptaroom.com">info@lacriptaroom.com</a>
+            <p>@2026 LaCripta. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>

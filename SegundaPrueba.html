@@ -1,61 +1,117 @@
-<!--El susurro de las Aguas-->
-<!--Se encarga Arturo-->
-
 <!DOCTYPE html>
-<html lang="es">
-
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LaCripta EscapeRooms - El susurro de las aguas</title>
-    <link rel="stylesheet" href="style.css">
+    <meta name="author" content="Maria Amengual Rigo">
+     <title>LaCripta - Escape Rooms</title>
+    <link rel="stylesheet" href="MainYSegundaPrueba.css">
+    <script defer src="IndexYSegundaPrueba.js"></script>
 </head>
-
 <body>
-    <header>
-        <!--Aquí deberá de ir un header que sea compatible con todos los htmls's. Lo mismo para el footer-->
-    </header>
-
-    <main>
-        <section>
-            <h2>El susurro de las aguas</h2>
-            <p>
-                Dicen que, cuando la luna llena se refleja en las aguas del pantano de Almansa, el pasado despierta..
+<div class="pagina" id="pantano">
+    <div class="viñeta" id="viñeta">
+        <img src="multimedia/imagenesMaría/Viñeta.png" alt="viñeta">    
+    </div>
+        
+    <div class="contenedor">
+        <header class="nav">
+            <div class="estructuraNav">
+            <div class="logo">
+                <img src="multimedia/imagenesMaría/Logo.png" alt="imagen Logo">
+            </div>
+            <nav class="opcionesNav">
+                    <ul class="menu"> <!--Creo que me he complicado de mas, voy a intentar hacerlo de otra forma-->
+                        <li><a href="index.html">Inicio</a></li>
+                        <li class="desplegableAventuras">
+                            <a href="index.html#1">Aventuras</a>
+                                <ul class="desplegado">
+                                    <li class="rojo"><a href="PrimeraPrueba.html">Oscuridad del Castillo</a></li>
+                                    <li class="azul"><a href="SegundaPrueba.html">El susurro de las aguas</a></li>
+                                    <li class="lila"><a href="TerceraPrueba.html">Exorcismo de Almansa</a></li>
+                                </ul>
+                        </li>
+                        <li><a href="Contacto.html">Contacto</a></li>
+                    </ul>
+            </nav>
+        </header>
+    </div>
+<!--Me interesa reutilizar la estructura de css asi que mantengo la estructura html aunque no haya carrusel en esta seccion-->
+    <div class="main">
+        <article class="diapositiva">
+            <img class="capaFondo" src="multimedia/imagenesMaría/FondoPantano.png">
+           
+            <div class="contenido" id="contenidoPantano"> 
+                <h1>El susurro de las aguas</h1>
+                <div class="infoSeccionPantano">
+                    <div class="infoSeccion">
+                        <p><span>Dificultad:</span> Media</p>
+                    </div>
+                    <div class="infoSeccion">
+                        <p><span>Número de Jugadores:</span> 4-5</p>
+                    </div>
+                    <div class="infoSeccion">
+                        <p><span>Duración aproximada:</span> 20 minutos</p>
+                    </div>
+                </div>
+                <p id="parrafo"> "Dicen que, cuando la luna llena se refleja en las aguas del pantano de Almansa, el pasado despierta..
                 Susurros, luces y sombras emergen cada noche, reclamando ser escuchados.
                 Un mapa olvidado y el diario de un viejo guardián han llegado a vuestras manos.
-                Ahora, el pantano os llama… y no todos regresan de él.
-            </p>
-        </section>
-
-        <section>
-            <article>
-                <p>
-                    Cuando un antiguo poblado quedó sumergido tras una tormenta inexplicable, el pantano de Almansa se
-                    convirtió en un lugar lleno de misterios.
-                    Com miembros de una hermandad secreta, deberéis adentraros en la zona prohibida para investigar
-                    fenómenos sobrenaturales y descubrir el destino de un espíritu ancestral atrapado bajo las aguas.
-                    Resolveréis enigmas ligados a los elementos naturales y tomaréis decisiones que marcarán vuestro
-                    final.
-                    El pantano os observa… ¿romperéis la maldición o quedaréis atrapados en su susurro eterno?
+                Ahora, el pantano os llama… y no todos regresan de él."
                 </p>
+            </div>
+        </article>
 
-                <ul class="info">
-                    <li>Temática: Misterio y fantasía</li>
-                    <li>Duración estimada: 30 minutos</li>
-                    <li>Dificultad: Media</li>
-                    <li>Jugadores: 3-6 personas</li>
-                </ul>
+        <section class="introduccion">
+            <section class="historiaSeccion">
+                <div>
+                <p>Cuando un antiguo po<span class="letraOculta">b</span>lado quedó sumergido tras una tormenta inexplicable, el p<span class="letraOculta">a</span><span></span>ntano de Almansa se convirtió en un lugar lleno de misterios y murmuros le<span class="letraOculta">j</span>an<span class="letraOculta">o</span>s. </p> </div>
+                <div><img src="multimedia/imagenesMaría/InfoSeccion1.png" alt=""></div>
+            </section>
 
-                <div class="imagen">
-                    <img src="multimedia/imagen/Pantano.Almansa.jpeg" alt="Pantano maldito">
-                </div>
-            </article>
+            <div class="separador" id="intento">
+            .
+            </div>
+
+            <section class="historiaSeccionInversa">
+                <p><span>Como miembros d</span><span class="letraOculta">e</span> <span>una hermandad secreta, deberéis adentraros en</span> <span class="letraOculta">l</span><span>a zona prohibida p</span><span class="letraOculta">a</span><span>ra investi</span><span class="letraOculta">g</span><span>ar fenómenos sobrenat</span><span class="letraOculta">u</span><span>rales y descubrir el destino de un espíritu </span><span class="letraOculta">a</span><span>ncestral atrapado bajo las aguas. </span></p>
+                <img src="multimedia/imagenesMaría/Infoseccion2.png" alt="">
+            </section>
+
+            <div class="separador" id="intento">
+.
+            </div>
+
+            <section class="historiaSeccion">
+                <p>Resolveréis <span class="letraOculta">e</span>nigmas ligados a lo<span class="letraOculta">s</span> elementos na<span class="letraOculta">t</span>ur<span class="letraOculta">a</span>les y tomaréis decisiones que marcarán vuestro final.</p>
+                <img src="multimedia/imagenesMaría/InfoSeccion3.png" alt="">
+            </section>
+
+            <div class="separador" id="intento">
+.
+            </div>
+
+            <section class="historiaSeccionInversa">
+                <p>E<span class="letraOculta">l</span> p<span class="letraOculta">a</span>ntano os obser<span class="letraOculta">v</span>a… ¿romp<span class="letraOculta">e</span><span class="letraOculta">r</span>éis la mal<span class="letraOculta">d</span>ición o qued<span class="letraOculta">a</span>réis atrapa<span class="letraOculta">d</span>os en su susurro eterno?</p>
+            </section>
+            
+            <section class="botones">
+                <a href="index.html">Quiero volver</a>
+                <button  id="aceptoBoton">La romperé</button>
+            </section>
+            <img src="multimedia/imagenesMaría/farol.png" draggable="true" class="farol">
         </section>
-    </main>
-
-    <footer>
-
+    </div>
+</div>
+<footer>
+        <div class="contenidoFooter">
+            <img src="multimedia/imagenesMaría/Logo.png" alt="">
+            <p class="fraseInvitadora">¿Serás tu el elegido? ¿Tienes lo que hace falta?</p>
+            <p>Almansa, calle Corredera n.4.</p>
+            <p>(+34) 647 76 83 48</p>
+            <a class="mail" href="mailto:info@lacriptaroom.com">info@lacriptaroom.com</a>
+            <p>@2026 LaCripta. Todos los derechos reservados.</p>
+        </div>
     </footer>
 </body>
-
 </html>

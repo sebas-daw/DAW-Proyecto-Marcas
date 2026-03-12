@@ -1,0 +1,580 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body, #index{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background:black;
+    color: rgb(180, 180, 180);
+}
+
+.pagina{
+    position: relative;
+}
+
+.viñeta{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.viñeta img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.95;
+}
+
+/*Nav*/
+.nav{
+    position: fixed;
+    margin: 0 0 0 0;
+    height: 6em;
+    width: 100%;
+    z-index: 500;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(10px);
+    border-bottom: 0.1em solid rgb(22, 21, 21);
+}
+
+.estructuraNav{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: space-between;
+    gap: 4em;
+}
+
+.nav .logo img{
+    width: 12em;
+    height: 8em;
+    margin-top: 2em;
+    margin-left: 2.5em;
+    margin-right: auto;
+}
+
+
+
+
+
+/*Quiero hacer un desplegable en el nav, asi que uso mejor las listas*/
+.opcionesNav{
+    margin-right: 5%;
+    display: block;
+    margin-left: auto;
+}
+
+.menu{
+    display: flex;
+    gap: 3em;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.menu li a{
+    text-decoration: none;
+    color: antiquewhite;
+    font-weight: bolder;
+    letter-spacing: 0.3em;
+}
+
+.menu li a:hover{
+    text-decoration: line-through;
+    letter-spacing: 0.3em;
+    color: rgb(255, 183, 74);
+}
+
+.menu li details{
+    display: inline-block;
+}
+
+.desplegableAventuras{
+    position: relative;
+}
+
+.desplegado{
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    width: 15em;
+    border: 1px solid black;
+}
+
+.desplegado a{
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    background: rgba(19, 24, 32, 0.384);
+    
+}
+
+.desplegableAventuras:hover .desplegado{
+    display: block;
+}
+
+.desplegado a:hover{
+    background: rgba(24, 26, 49, 0.486);
+    display: block;
+}
+
+.desplegado .rojo a:hover{
+    color: red;
+    text-shadow: 0.1em 0.1em 0 black;
+}
+
+.desplegado .azul a:hover{
+    color: rgb(62, 139, 255);
+    text-shadow: 0.1em 0.1em 0 black;
+}
+.desplegado .lila a:hover{
+    color: rgb(153, 64, 255);
+    text-shadow: 0.1em 0.1em 0 black;
+}
+
+
+
+
+
+
+
+
+
+/*Empezando con la tortura del carrusel*/
+.carrusel{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+/*No queremos que las diapositivas salgan de la vista*/
+.vista{
+    width: 100%;
+    overflow: hidden;
+}
+
+/*El largo del carrusel, le he puesto carrete como el carrete de una camara*/
+.carrete{
+    display: flex;
+}
+
+.diapositiva{
+    position: relative;
+    flex: 0 0 100%;
+    height: 100vh;
+}
+
+.capaFondo{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.capaArriba{
+    position: absolute;
+    right: 6%;
+    height: auto;
+    bottom: 0;
+    top: auto;
+    left: auto;
+    z-index: 2;
+    height: 65%;
+}
+
+.contenido{
+    position: absolute;
+    left: 10%;
+    bottom: 14%;
+    z-index: 3;
+    max-width: 32.5rem; /*son unos 520px*/
+}
+
+
+.contenido p{
+    width: 70%;
+    color: rgb(223, 224, 226);
+}
+.contenido h1{
+    color: white;
+    margin-bottom: 5%;
+}
+
+
+.contenido button{
+    display: inline-block;
+    padding: 1em 2em;
+    background-color: transparent;
+    border: 1px solid rgb(255, 242, 242);
+    border-radius: 5%;
+    color: rgb(212, 212, 212);
+    cursor: pointer;
+    margin-top: 2em;
+}
+
+.contenido button:hover{
+    box-shadow: 0 0 15px 2px rgb(63, 110, 172);
+}
+
+.flecha{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 5;
+    width: 4rem;
+    height: 4rem;
+    border-radius: 50%;
+    border: 0.06rem solid rgba(255, 255, 255, 0.25);
+    background: rgba(0, 0, 0, 0.25);
+    color: white;
+    font-size: 1.7rem;
+    cursor: pointer;
+    font-weight: lighter;
+}
+
+.flechaIzquierda{
+    left: 2.5%;
+    right: auto;
+}
+
+.flechaDerecha{
+    right: 2.5%;
+    left: auto;
+}
+.flecha:hover{
+    background: rgba(0, 0, 0, 0.4);
+}
+
+
+
+
+
+
+
+/*Separador*/
+.separador{
+    width: 100%;
+    height: 100%;
+}
+
+.separador img{
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+/*Diseño de las secciones*/
+.seccion{
+    position: relative;
+    height: 30em;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+    margin-bottom: 0.2em;
+}
+
+.seccion>img{
+    position: absolute;
+    left: 0;
+    top: -50%; 
+    width: 100%;
+    height: 180%;
+    object-fit: cover;
+    display: block;
+}
+
+.seccion .info{
+    position: relative;
+    z-index: 2;
+    text-align: center;
+}
+
+.seccion h2{
+color: white;
+   margin-bottom: 0.5em;
+   text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.8);
+}
+
+/*Para el boton de las secciones*/
+.seccion .info a, .introduccion .botones a, .botones button{
+    padding: 1em 2em;
+    border: 0.1em solid white;
+    border-radius: 0.3em;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: rgb(255, 255, 255);
+    font-weight: bolder;
+    display: block;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/*Meto una pequeña transición hacia arriba*/
+.seccion .info a:hover{
+    box-shadow: 0 0 15px 2px black;
+    transition: 0.3s ease;
+    transform: translateY(-0.1em);
+}
+
+/*Dejo estos nombres porque no se si voy a tener otra clase que llame botones*/
+.introduccion .botones a:hover{
+    background-color: rgba(214, 214, 214, 0.521);
+    color: black;
+    box-shadow: 0 0 15px 2px rgb(104, 21, 21);
+    transform: translateY(-0.3em);
+}
+
+.introduccion .botones #aceptoBoton:hover{
+    background-color: rgba(255, 249, 194, 0.788);
+    box-shadow: 0 0 15px 2px rgb(21, 104, 21);
+    transform: translateY(-0.3em);
+
+}
+
+
+
+/*Footer*/
+footer, .historiaSeccion, .historiaSeccionInversa{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2em 1.5em 3em;
+    margin-bottom: 5em;
+}
+
+.historiaSeccionInversa{
+    padding-top: 3em;
+}
+.contenidoFooter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.65em;
+}
+
+.contenidoFooter img{
+    width: 12em;
+    height: 8em;
+    display: inline-block;
+}
+
+.fraseInvitadora{
+    font-family: impact;
+    letter-spacing: 0.3em;
+    border-right-style: ridge;
+    color: rgb(172, 108, 66);
+}
+
+footer p, .historiaSeccion p, .historiaSeccionInversa p{
+    color: rgb(196, 193, 153);
+    font-family: 'Courier New', Courier, monospace;
+}
+.mail{
+    color: rgb(210, 210, 210);
+    text-decoration: none;
+}
+.mail:hover{
+    text-decoration: underline;
+}
+
+
+
+
+
+/*PAGINA PANTANO*/
+/*Añadidos del pantano*/
+#pantano{
+    margin: 0;
+    background-color: rgb(7, 12, 17);
+}
+
+
+#contenidoPantano{
+    text-align: center;
+    position: absolute;
+    left: 10%;
+    bottom: 14%;
+    z-index: 3;
+    max-width: 80%;
+    
+}
+
+#contenidoPantano .infoSeccionPantano{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+    
+}
+
+#contenidoPantano .infoSeccion{
+    width: 100%;
+    padding: 1em;
+    
+}
+
+.contenido #parrafo{
+    color: rgb(189, 189, 189);
+    margin-top: 3%;
+    width: 100%;
+    padding: 2em;
+    background: transparent; 
+    backdrop-filter: blur(0.2em);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    border-radius: 50em;
+    text-shadow: 0.1em 0.1em 0.3em black;
+}
+
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1em;
+    width: 100%;
+    padding-bottom: 2em;
+}
+
+.historiaSeccion{
+    display: flex;
+    align-items: center;
+    gap: 6em;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 0;
+    padding-top: 4em;
+}
+.historiaSeccion p{
+    padding-left: 6em;
+    padding-right: auto;
+}
+
+.historiaSeccionInversa{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    gap: 4em;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.historiaSeccionInversa{
+    padding-left: auto;
+    padding-right: 6em;
+    padding-bottom: 0;
+}
+
+
+.historiaSeccion img, .historiaSeccionInversa img{
+    height: auto;
+    display: block;
+    max-width: 20em;
+    padding-bottom: 0;
+    margin-right: 10em;
+    margin-left: auto;
+    box-shadow: 0 0 15px 10px rgb(5, 5, 5);
+}
+.historiaSeccionInversa img{ 
+    margin-right:auto;
+    margin-left: 10em;
+}
+
+
+
+#contenidoPantano .infoSeccionPantano .infoSeccion{
+    background: rgba(73, 151, 202, 0.164); 
+    backdrop-filter: blur(0.2em);
+    border: 1px solid rgba(255, 255, 255, 0.075);
+    text-shadow: 0.1em 0.1em 0.3em black;
+}
+
+.infoSeccion span{
+    color: rgb(21, 156, 138);
+}
+
+
+
+
+/*No me gusta el titulo asi, me parece algo soso y las letras tampoco me llaman, asi que con tu permiso voy a buscar una forma de hacerlo
+más estético*/
+
+#contenidoPantano h1{
+    background: linear-gradient(to right,rgba(7, 11, 16,1), rgba(17,27,42,1), rgb(21, 3, 26), rgb(9, 55, 99), rgb(36, 4, 54), rgba(10,15,24,1));
+    /*Para que se vea el gradiante a través de las letras transparentes:*/
+    background-clip: text;
+    color: transparent;
+    background-size: 200% auto;
+    animation: gradientAnimacion 7s linear infinite;
+
+    /*Hasta aqui he ido paso a paso siguiendo de una guia de internet para poder usar un gradiante en el titulo*/
+    text-transform: capitalize;
+    letter-spacing: 0.3em;
+    text-shadow: 0px 0px 9px #0e2a4d;
+    font-family: MomsTypewriter;
+    font-size: 3em;
+    
+}
+
+/*He seguido este tutorial: https://www.youtube.com/watch?v=8mjDSmQvbtk para hacer esta animación. Si no está permitido, lo cambiaré*/
+ @keyframes gradientAnimacion{
+    0%{
+        background-position: 200% 50%;
+    }
+    100%{
+        background-position: 0% 50%;
+    }
+ }
+
+
+ /*No me convencen los separadores de la pagina, voy a intentar algo con lo que he aprendido arriba*/
+
+ #intento{
+    background: linear-gradient(to right, rgba(17,27,42,1), rgb(9, 31, 51), rgb(3, 39, 39), rgb(18, 48, 77), rgb(16, 27, 46));
+    background-size: 200% auto;
+    animation: gradientAnimacion 7s linear infinite; /*Usare la misma animacion*/
+    box-shadow:  0 0 5px 5px rgb(5, 5, 5);
+}
+
+.farol{
+    width: 4em;
+    height: auto;
+    position: fixed;
+    right: 2em;
+    left: auto;
+    z-index: 999999;
+    bottom: 0em;
+    display: none;
+    cursor: grab;
+    filter: none; /*He buscado como poder iluminar el farol*/
+}
+
+p>textoGris {
+    color:gray;
+}
+
+.textoGris .letraOculta{ /*Me veo obligada a hacer esta triquiñuela*/
+    color: red;
+}

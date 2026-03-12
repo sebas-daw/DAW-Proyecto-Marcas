@@ -1,15 +1,153 @@
 /*General*/
-html {
-    scroll-behavior: smooth;
-}
-
-* {
-    margin: 0;
+*{
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-body {
+body, #index{
+    margin: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background:black;
+    color: rgb(180, 180, 180);
+}
+
+.pagina{
+    position: relative;
+}
+
+.viñeta{
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.viñeta img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.95;
+}
+
+/*Nav*/
+.nav{
+    position: fixed;
+    margin: 0 0 0 0;
+    height: 6em;
+    width: 100%;
+    z-index: 500;
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(10px);
+    border-bottom: 0.1em solid rgb(22, 21, 21);
+}
+
+.estructuraNav{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-items: space-between;
+    gap: 4em;
+}
+
+.nav .logo img{
+    width: 12em;
+    height: 8em;
+    margin-top: 2em;
+    margin-left: 2.5em;
+    margin-right: auto;
+}
+
+
+
+
+
+/*Quiero hacer un desplegable en el nav, asi que uso mejor las listas*/
+.opcionesNav{
+    margin-right: 5%;
+    display: block;
+    margin-left: auto;
+}
+
+.menu{
+    display: flex;
+    gap: 3em;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    
+}
+
+.menu li a{
+    text-decoration: none;
+    color: antiquewhite;
+    font-weight: bolder;
+    letter-spacing: 0.3em;
+}
+
+.menu li a:hover{
+    text-decoration: line-through;
+    letter-spacing: 0.3em;
+    color: rgb(255, 183, 74);
+}
+
+.menu li details{
+    display: inline-block;
+}
+
+.desplegableAventuras{
+    position: relative;
+}
+
+.desplegado{
+    display: none;
+    position: absolute;
+    list-style-type: none;
+    width: 15em;
+    border: 1px solid black;
+}
+
+.desplegado a{
+    display: block;
+    padding: 0.5em;
+    text-decoration: none;
+    text-align: center;
+    color: black;
+    background: rgba(19, 24, 32, 0.384);
+    
+}
+
+.desplegableAventuras:hover .desplegado{
+    display: block;
+}
+
+.desplegado a:hover{
+    background: rgba(24, 26, 49, 0.486);
+    display: block;
+}
+
+.desplegado .rojo a:hover{
+    color: red;
+    text-shadow: 0.1em 0.1em 0 black;
+}
+
+.desplegado .azul a:hover{
+    color: rgb(62, 139, 255);
+    text-shadow: 0.1em 0.1em 0 black;
+}
+.desplegado .lila a:hover{
+    color: rgb(153, 64, 255);
+    text-shadow: 0.1em 0.1em 0 black;
+}
+
+
+
+
+
+.terceraPrueba{
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -17,7 +155,7 @@ main>section p {
     padding: 0 20px
 }
 
-body.terceraPrueba {
+.terceraPrueba {
     background-image: url(multimedia/imagen/Exorcismo.Almansa.png);
     background-size: cover;
     background-position: center;
@@ -34,11 +172,13 @@ body.terceraPrueba {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 30vh;
+    height: 35vh;
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
+    margin-top: 0;
+    padding-top: 7em;
 }
 
 .indice::before {
@@ -74,6 +214,7 @@ body.terceraPrueba {
     justify-content: center;
     gap: 2rem;
     margin-bottom: 2.3rem;
+    color: black;
 }
 
 .caja {
@@ -254,6 +395,52 @@ section {
         align-items: center;
     }
 }
+
+/*Footer*/
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 2em 1.5em 3em;
+    
+}
+
+.contenidoFooter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.65em;
+}
+
+.contenidoFooter img{
+    width: 12em;
+    height: 8em;
+    display: inline-block;
+}
+
+.fraseInvitadora{
+    font-family: impact;
+    letter-spacing: 0.3em;
+    border-right-style: ridge;
+    color: rgb(172, 108, 66);
+}
+
+footer p, .historiaSeccion p, .historiaSeccionInversa p{
+    color: rgb(196, 193, 153);
+    font-family: 'Courier New', Courier, monospace;
+}
+.mail{
+    color: rgb(210, 210, 210);
+    text-decoration: none;
+}
+.mail:hover{
+    text-decoration: underline;
+}
+
+
+
 
 /*Buscando información sobre crear animaciones en JavaScript
 he descubierto que se hace en CSS mediante
