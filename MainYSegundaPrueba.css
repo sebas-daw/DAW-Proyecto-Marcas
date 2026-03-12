@@ -366,6 +366,7 @@ footer, .historiaSeccion, .historiaSeccionInversa{
 .historiaSeccionInversa{
     padding-top: 3em;
 }
+
 .contenidoFooter{
     display: flex;
     flex-direction: column;
@@ -397,7 +398,6 @@ footer p, .historiaSeccion p, .historiaSeccionInversa p{
 .mail:hover{
     text-decoration: underline;
 }
-
 
 
 
@@ -571,7 +571,7 @@ más estético*/
     filter: none; /*He buscado como poder iluminar el farol*/
 }
 
-p>textoGris {
+.textoGris {
     color:gray;
 }
 

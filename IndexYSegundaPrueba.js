@@ -1,28 +1,28 @@
 /*Defino el array: */
 const diapositivas=[
     {
-        fondo: "Imagenes/FondoCastillo.png",
-        arriba: "Imagenes/Silueta.png",
+        fondo: "multimedia/imagenesMaría/FondoCastillo.png",
+        arriba: "multimedia/imagenesMaría/Silueta.png",
         categoria: "Categoría: Thriller/Acción",
         titulo:"La oscuridad del Castillo",
         texto: "Cuando la peste devore la ciudad, solo quienes se atreven a cruzar la oscuridad pueden aspirar a ver un nuevo amanecer.",
-        boton: "Más información"
+        enlaces: "PrimeraPrueba.html"
     },
     {
-        fondo: "Imagenes/FondoPantano.png",
-        arriba: "Imagenes/Espiritu.png",
+        fondo: "multimedia/imagenesMaría/FondoPantano.png",
+        arriba: "multimedia/imagenesMaría/Espiritu.png",
         categoria: "Categoría: Misterio/Fantasía",
         titulo: "El susurro de las aguas",
         texto: "Donde el agua cubrió un pueblo, nació un misterio... y ahora os invita a descubrir la historia que hubo detrás de todo eso.",
-        boton: "Más información"
+        enlaces: "SegundaPrueba.html"
     },
     {
-        fondo: "Imagenes/FondoExorcismo.png",
-        arriba: "Imagenes/Niña.png",
+        fondo: "multimedia/imagenesMaría/FondoExorcismo.png",
+        arriba: "multimedia/imagenesMaría/Niña.png",
         categoria: "Categoría: Terror/Horror",
         titulo: "El exorcismo de Almansa",
         texto: "Lo que quedó a mitad no duerme...aún respira oculto, aguardando el momento de reclamar lo que una vez le fue negado.",
-        boton: "Más información"
+        enlaces:"TerceraPrueba.html"
     } 
 ];
 
@@ -32,7 +32,7 @@ const imgArriba = document.querySelector(".capaArriba");
 const spantexto = document.querySelector(".subtitulo");
 const titulo = document.querySelector(".contenido h1");
 const parrafo = document.querySelector(".contenido p");
-const boton = document.querySelector(".contenido button");
+const boton = document.querySelector(".button");
 
 const botonIzq = document.querySelector(".flechaIzquierda");
 const botonDer = document.querySelector(".flechaDerecha");
@@ -47,7 +47,7 @@ function vistaDiapositivas(){
     spantexto.textContent = diapositiva.categoria;
     titulo.textContent = diapositiva.titulo;
     parrafo.textContent = diapositiva.texto;
-    boton.textContent = diapositiva.boton;
+    boton.href = diapositiva.enlaces;
 }
 
 if(botonDer != null && botonIzq !=null){
@@ -61,6 +61,7 @@ if(botonDer != null && botonIzq !=null){
         vistaDiapositivas();
     });
 }
+
 
 
 /*El movimiento de las secciones me lleva a la determinacion de si podré mover la 
