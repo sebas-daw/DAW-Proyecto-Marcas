@@ -32,6 +32,7 @@ let cont=0;
 function comprobarIntento(){
     if (intento.trim() === "me a tre vo") {
         intento= "";
+        cont=0;
         frase.innerHTML=" Contacta con nosotros valiente";
     }else {
         intento= "";
