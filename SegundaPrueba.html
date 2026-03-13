@@ -40,6 +40,12 @@
     <div class="main">
         <article class="diapositiva">
             <img class="capaFondo" src="multimedia/imagenesMaría/FondoPantano.png">
+            /*Para que hayan varias respuestas y sea menos obvio*/
+            <p class="respuestaOculta correcta" id="respCorrecta">Draugr</p>
+            <p class="respuestaOculta falsa" id="respFal1">Ritual</p>
+            <p class="respuestaOculta falsa" id="respFal2">Esperanza</p>
+            <p class="respuestaOculta falsa" id="respFal3">Almansa</p>
+            <p class="respuestaOculta falsa" id="respFal4">Aguas</p>
            
             <div class="contenido" id="contenidoPantano"> 
                 <h1>El susurro de las aguas</h1>
@@ -100,6 +106,20 @@
                 <button  id="aceptoBoton">La romperé</button>
             </section>
             <img src="multimedia/imagenesMaría/farol.png" draggable="true" class="farol">
+            <div class="oculto">
+                <img src="multimedia/imagenesMaría/anciano.png" alt="La pista del anciano" id="elGuia">
+            
+                <div class="resolucion">
+                    <div id="pista">Los antiguos encriptaron la respuesta. Dijeron algo de <span class="resaltado">usar la luz</span>  para hallarla.</div>
+                    <div class="cryptex">
+                        <p>¿Qué palabra introducirás?</p>
+                        <input type="text" id="clave">
+                        <button id="botonClave">¿será la correcta?</button>
+                    </div>
+                    <p id="final"></p>
+                </div>
+            </div>
+        
         </section>
     </div>
 </div>

@@ -2,7 +2,6 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    scroll-behavior: smooth;
 }
 
 body, #index{
@@ -11,6 +10,8 @@ body, #index{
     background:black;
     color: rgb(180, 180, 180);
 }
+
+
 
 .pagina{
     position: relative;
@@ -22,7 +23,7 @@ body, #index{
     height: 100vh;
     width: 100%;
     pointer-events: none;
-    z-index: 9999;
+    z-index: 9998;
 }
 
 .viñeta img{
@@ -266,6 +267,7 @@ body, #index{
 .separador{
     width: 100%;
     height: 100%;
+    margin-top: 0.2em;
 }
 
 .separador img{
@@ -352,6 +354,12 @@ color: white;
 
 
 
+
+
+
+
+
+
 /*Footer*/
 footer, .historiaSeccion, .historiaSeccionInversa{
     width: 100%;
@@ -362,7 +370,6 @@ footer, .historiaSeccion, .historiaSeccionInversa{
     padding: 2em 1.5em 3em;
     margin-bottom: 5em;
 }
-
 .historiaSeccionInversa{
     padding-top: 3em;
 }
@@ -398,6 +405,7 @@ footer p, .historiaSeccion p, .historiaSeccionInversa p{
 .mail:hover{
     text-decoration: underline;
 }
+
 
 
 
@@ -559,22 +567,143 @@ más estético*/
 }
 
 .farol{
-    width: 4em;
-    height: auto;
-    position: fixed;
-    right: 2em;
-    left: auto;
-    z-index: 999999;
-    bottom: 0em;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 99999;
     display: none;
-    cursor: grab;
+    width: 4em;
     filter: none; /*He buscado como poder iluminar el farol*/
 }
 
-.textoGris {
+
+
+.textoGris{
     color:gray;
 }
 
-.textoGris .letraOculta{ /*Me veo obligada a hacer esta triquiñuela*/
+.textoGris .letraOculta{
     color: red;
 }
+
+.introduccion{
+    position: relative;
+}
+
+
+
+
+/*Para las respuestas ocultas del banner*/
+.respuestaOculta{
+    position: absolute;
+    font-size: 2em;
+    z-index: 20;
+    color: transparent;
+    transform: translate(-50%, -50%);
+
+}
+
+.respuestaOculta.visible{
+    color: rgb(47, 47, 90);
+
+}
+
+#respCorrecta{
+    top: 90%;
+    left: 46%
+}
+
+#respFal1{
+    top: 50%;
+    left: 15%;
+}
+
+#respFal2{
+    top: 40%;
+    left: 89%;
+}
+
+#respFal3{
+    top: 90%;
+    left: 80%;
+}
+
+#respFal4{
+    top: 24%;
+    left: 24%;
+}
+
+
+
+
+/*Para el anciano y el mensaje del anciano*/
+.oculto{
+    position: fixed;
+    left: 0.7em;
+    bottom:0;
+    display: none;
+    z-index: 9997;
+    align-items: flex-end;
+    gap: 1em;
+}
+
+.oculto img{
+    height: 35em;
+    width: auto;
+    filter: drop-shadow(0 0 60px rgba(46, 46, 16, 0.747)); 
+}
+
+
+/*Para el cryptex*/
+.resolucion{
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+#pista{
+    background: rgba(0, 0, 0, 0.856);
+    border: 0.1em solid rgb(65, 119, 128);
+    border-radius: 1em;
+    color: rgba(214, 223, 220);
+    padding: 2em;
+
+}
+
+.resaltado{
+    color: rgb(235, 235, 108);
+    font-weight: bold;
+}
+
+.cryptex{
+    background: rgba(0, 0, 0, 0.856);
+    border: 0.1em solid rgb(65, 119, 128);
+    border-radius: 1em;
+    color: rgba(214, 223, 220);
+    padding: 2em;
+    display: none;
+    text-align: center;
+    
+}
+
+.cryptex input{
+    margin-top: 1em;
+    background: rgba(15,15,15,0.8);
+    border: 0.2em solid rgb(74, 13, 116);
+    border-radius: 0.5em;
+    color: grey;
+    padding: 0.5em;
+    text-align: center;
+    outline: none;
+    margin-right: 1em;
+}
+
+.cryptex button{
+    background: rgb(41, 41, 41);
+    color: rgb(202, 183, 8);
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0.5em;
+}
+
