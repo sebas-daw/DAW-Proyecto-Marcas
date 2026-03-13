@@ -52,6 +52,7 @@ let precioTotal = document.getElementById("total");
 
 numPersonas.addEventListener("input", ()=>{
     let persona = parseInt(numPersonas.value);
-    let total = persona * 30;
+    let precioPersona = numPersonas.dataset.precio;
+    let total = persona * precioPersona;
     precioTotal.value = total + ",00 €"
 })
