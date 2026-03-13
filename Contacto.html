@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LaCripta EscapeRooms - Contacto</title>
     <link rel="stylesheet" href="Contacto.css">
+
 <body>
     <div class="Contenedor">
-            <header class="nav">
-                <div class="estructuraNav">
+        <header class="nav">
+            <div class="estructuraNav">
                 <div class="logo">
                     <img src="multimedia/imagenesMaría/Logo.png" alt="imagen Logo">
                 </div>
@@ -17,59 +19,70 @@
                         <li><a href="index.html">Inicio</a></li>
                         <li class="desplegableAventuras">
                             <a href="index.html#1">Aventuras</a>
-                                <ul class="desplegado">
-                                    <li class="rojo"><a href="PrimeraPrueba.html">Oscuridad del Castillo</a></li>
-                                    <li class="azul"><a href="SegundaPrueba.html">El susurro de las aguas</a></li>
-                                    <li class="lila"><a href="TerceraPrueba.html">Exorcismo de Almansa</a></li>
-                                </ul>
+                            <ul class="desplegado">
+                                <li class="rojo"><a href="PrimeraPrueba.html">Oscuridad del Castillo</a></li>
+                                <li class="azul"><a href="SegundaPrueba.html">El susurro de las aguas</a></li>
+                                <li class="lila"><a href="TerceraPrueba.html">Exorcismo de Almansa</a></li>
+                            </ul>
                         </li>
                         <li><a href="Contacto.html">Contacto</a></li>
                     </ul>
                 </nav>
-               
-            </header>
-        </div> 
 
-<div class="contacto">
-    <main>
-        <section class="contactoTitulo">
-            <h1>Escape Rooms - Contacto</h1>
-        </section>
+        </header>
+    </div>
 
-        <section class="contactoAyuda">
-            <h2>¿Necesitas ayuda? ¡Contacta con nosotros!</h2>
-            <p>
-                Email:
-                <a href="mailto:LaCriptaEscapeRooms@gmail.com">LaCriptaEscapeRooms@gmail.com</a>
-            </p>
+    <div class="contacto">
+        <main>
+            <section class="contactoTitulo">
+                <h1>Escape Rooms - Contacto</h1>
+            </section>
 
-            <p>
-                Teléfono:
-                <a href="tel:+34666846649">(+34) 666 846 649</a>
-            </p>
-        </section>
+            <section class="contactoAyuda">
+                <h2>¿Necesitas ayuda? ¡Contacta con nosotros!</h2>
+                <p>
+                    Email:
+                    <a href="mailto:info@lacriptaroom.com">info@lacriptaroom.com</a>
+                </p>
 
-        <section class="formContacto">
-            <h3>Envíanos un mensaje</h3>
+                <p>
+                    Teléfono:
+                    <a href="tel:+34647768348">(+34) 647 76 83 48</a>
+                </p>
+            </section>
 
-            <form action="Contacto.html" method="get">
+            <section class="formContacto">
+                <h3>Envíanos un mensaje</h3>
 
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <form id="formContacto" action="Contacto.html" method="get">
 
-                <label for="email">Email</label>
-                <input type="email" name="email" id="email" required>
+                    <label for="nombre">Nombre</label>
+                    <input type="text" id="nombre" name="nombre" required>
 
-                <label for="mensaje">¡Cuéntanos!</label>
-                <textarea name="mensaje" id="mensaje" rows="5"></textarea>
+                    <label for="email">Email</label>
+                    <input type="email" name="email" id="email" required>
 
-                <button type="submit">Enviar</button>
+                    <label for="mensaje">¡Cuéntanos!</label>
+                    <div id="editorMensaje" rows="5" contenteditable="true">
+                        <p>Mínimo 10 carácteres</p>
+                        <br>
+                        <p>¡Puedes usar los botones de abajo para resaltar tus palabras!</p>
+                    </div>
+                    <input type="hidden" name="mensaje">
 
-            </form>
-        </section>
-    </main>
-</div>
-   <footer>
+                    <div class="estiloTexto">
+                        <button type="button" id="btn-negrita"><b>N</b></button>
+                        <button type="button" id="btn-cursiva"><i>K</i></button>
+                        <button type="button" id="btn-subrayado"><u>S</u></button>
+                    </div>
+
+                    <button type="submit">Enviar</button>
+
+                </form>
+            </section>
+        </main>
+    </div>
+    <footer>
         <div class="contenidoFooter">
             <img src="multimedia/imagenesMaría/Logo.png" alt="">
             <p class="fraseInvitadora">¿Serás tu el elegido? ¿Tienes lo que hace falta?</p>
@@ -79,5 +92,18 @@
             <p>@2026 LaCripta. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script src="Contacto.js"></script>
 </body>
+
 </html>
+
+<!--
+                    <div id="editorMensaje" rows="5" contenteditable="true">
+en ese div se ha hecho como texto editable ya que el textarea del formulario es texto plano y no se puede editar en él como en el ejercicio de clase.
+Investigando, he visto que se puede poner el atributo contenteditable, lo que permite escribir dentro del div.
+Pero ocurre que el contenido que haya escrito no se enviará con el formulario, por lo que
+                    <input type="hidden" name="mensaje">
+con esta etiqueta y el valor "hidden", puedo darle la clase mensaje para que en el JS pueda copiar el valor del texto a la clase
+y se envíe como si fuera un textarea.
+-->
