@@ -18,22 +18,28 @@ body, #index{
     color: var(--color-letra);
 }
 
-.marco{
-    position:absolute;
+
+.viñeta{
+    position: fixed;
     top: 0;
-    left: 0;
-    height: 100%;
+    height: 100vh;
     width: 100%;
+    pointer-events: none;
     z-index: 3;
 }
-.marco img{
+
+.viñeta img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    opacity: 0.95;
 }
 section{
     margin-top: 1rem;
     margin-bottom: 1rem;
+    font-family: 'Courier New', Courier, monospace;
     padding: 1rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 15px 2px black;
     background-color: var(--color-section) ;
 }
 .principal{
@@ -61,12 +67,18 @@ section{
 }
 #titulo{
     position: absolute;
-    bottom: 2rem;
-    right: 2rem;
-    color: black;
-    -webkit-text-stroke: 1px var(--color-letra); /* he buscado en google: "como aplicar un borde a la letra de un texto en html /css para resaltarlo" */
+    left: 6rem;
+    bottom: 15rem;
+    color: white;
+    padding: 1rem;
+    font-family: system-ui;}
+    
+#silueta{
+    position: absolute;
+    height: 60%;
+    bottom: 0rem;
+    right: 10%;
 }
-
 .nav{
     position: fixed;
     margin: 0 0 0 0;
@@ -226,6 +238,7 @@ section{
     text-align: center;
     padding: 1rem;
     margin: 1rem;
+    font-family: 'Courier New', Courier, monospace;
     
 }
 
@@ -235,8 +248,21 @@ section{
     max-height: 100%;
     overflow: hidden;
     border-radius: 0.5rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+    box-shadow: 0 0 15px 2px black;
 } 
+.der div.imagen{
+    
+    opacity: 0;
+    transform: translate(-50px);
+    transition: all 0.6s ease;
+}
+
+.izq div.imagen{
+    
+    opacity: 0;
+    transform: translate(50px);
+    transition: all 0.6s ease;
+}
  div.imagen img{
     width: 100%;
     height: 100%;
@@ -244,41 +270,53 @@ section{
     border-radius: 0.5rem;
 }
 
+div.imagen.mostrar {
+    opacity: 1;
+    transform: translateY(0);
+}
 #contenedor_enlace{
     text-align: center;
+    margin-bottom: 0;
+}
+#contenedor_enlace p{
+    padding: 1rem;
 }
 #contenedor_enlace a{
     text-decoration: none;
     color: var(--color-letra);
     margin:1rem ;
-    padding: 0.5rem;
+    padding: 1rem;
     background-color: var(--color-fondo-html);
     border-radius: 0.5rem;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 0 15px 2px black;
+}
+.botones{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 1em;
+    width: 100%;
+    padding-bottom: 2em;
 }
 
-/* Especifico para el Juego */
-
-    main.juego{
-        display: grid;
-        grid-template-areas: 
-            "zona_imagenes zona_imagenes" 
-            "zona_personaje zona_juego";
-        grid-template-columns: 1fr 2fr;
-        grid-template-rows: 2fr 1fr;
-        align-items: center;
-        gap: 1rem;
-    }
-    .zona_imagenes{
-        grid-area: zona_imagenes;
-    }
-    .zona_personaje{
-        grid-area: zona_personaje;
-    }
-    .zona_juego{
-        grid-area: zona_juego;
-    }
-
+/*Boton para volver al índice*/
+.volverArriba {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: black;
+    color: white;
+    padding: 12px 16px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    
+    opacity: 0;
+}
+.volverArriba-visible {
+    opacity: 1;
+    transition: 0.6s;
+}
 
     /*Footer*/
 footer{

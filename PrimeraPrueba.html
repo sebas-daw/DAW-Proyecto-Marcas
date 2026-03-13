@@ -8,9 +8,7 @@
     <meta name="author" content="Sebastián Núñez Alcantud">
     <title>La oscuridad del castillo</title>
     <link rel="stylesheet" href="PrimeraPrueba.css">
-    <script defer>
-
-    </script>
+    <script src="PrimeraPrueba.js" defer></script>
 </head>
 
 <body>
@@ -42,11 +40,14 @@
     </div>
 
     <main>
-        <section class="principal"><!-- Presentacion e imagen de fondo-->
+        <section class="principal" ><!-- Presentacion e imagen de fondo-->
 
             <div id="contenedor_titulo">
                 <img id="img_titulo" src="multimedia/imagen/Castillo_v1.2.png" alt=""><!-- Fondo -->
-                <h1 id="titulo">La oscuridad del castillo</h1><!-- titulo sobre imagen-->
+                <div>
+                    <h1 id="titulo">La oscuridad del castillo</h1><!-- titulo sobre imagen-->
+                    <img id="silueta" src="multimedia/imagen/Silueta.png" alt="Silueta">
+                </div> 
 
             </div>
         </section>
@@ -54,9 +55,9 @@
             
             <div id="menu_informativo"><!-- Menú informativo-->
 
-                <p class="borde_1">Dificultad: </p>
-                <p class="borde_1">Número de Jugadores: </p>
-                <p class="borde_1">Duración Aproximada: </p>
+                <p class="borde_1">Dificultad: Baja Media </p>
+                <p class="borde_1">Número de Jugadores: 1 - 3</p>
+                <p class="borde_1">Duración Aproximada: 30 Minutos</p>
 
 
             </div>
@@ -71,7 +72,7 @@
         </section>
         <section class="contenido izq"><!-- Ubucar al usuario en lugar tiempo y circunstancia -->
             <div>
-                <p class="texto_contenido">Año 1349. Almansa ya no es la villa que conocías. La peste negra ha quebrado
+                <p class="texto_contenido">Almansa ya no es la ciudad que conocías. La oscuridad ha quebrado
                     calles y conciencias, y algo innombrable
                     camina ahora entre los vivos, usando los cuerpos de los muertos como morada. La ciudad baja se
                     consume entre el miedo,
@@ -81,13 +82,13 @@
             </div>
 
             <div class="imagen">
-                <img src="multimedia/imagen/Iglesia_v0.jpeg" alt="">
+                <img src="multimedia/imagen/Iglesia_v1.2.png" alt="">
             </div>
         </section>
         <section class="contenido der"><!-- Orientar al usuario sobre el objetivo -->
 
             <div class="imagen">
-                <img src="multimedia/imagen/Escaleras_v0.jpeg" alt="">
+                <img src="multimedia/imagen/Escaleras_v1.2.png" alt="">
             </div>
             <div>
                 <p class="texto_contenido">El Castillo de Almansa permanece en pie como el último bastión de orden, con
@@ -108,15 +109,19 @@
                 </p>
             </div>
             <div class="imagen">
-                <img src="multimedia/imagen/Convento_v1.jpeg" alt="">
+                <img src="multimedia/imagen/Convento_v1.2.png" alt="">
             </div>
         </section>
         <section id="contenedor_enlace" class="contenido"><!-- Apartado para comenzar el juego-->
-
-            <a href="">Comenzar</a>
-            <a href="PrimeraPrueba.html">Volver &#x21ED</a>
-
+            <p> la oscuridad acecha... ¿Te atreves a hacer un viaje intenso hacia el castillo?</p>
+            <div class="botones">
+                <a href="index.html">Quiero volver</a>
+                <a href="Contacto.html">Me atrevo</a>
+            </div>
         </section>
+        
+        <a href="PrimeraPrueba.html" class="volverArriba" id="botonArriba">↑</a> <!--a su debido momento se pondrá una imagen-->
+
     </main>
     <footer>
         <div class="contenidoFooter">
