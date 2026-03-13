@@ -280,8 +280,18 @@ div.imagen.mostrar {
 }
 #contenedor_enlace p{
     padding: 1rem;
+    margin: 1rem;
 }
 #contenedor_enlace a{
+    text-decoration: none;
+    color: var(--color-letra);
+    margin:1rem ;
+    padding: 1rem;
+    background-color: var(--color-fondo-html);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 15px 2px black;
+}
+#contenedor_enlace button{
     text-decoration: none;
     color: var(--color-letra);
     margin:1rem ;
