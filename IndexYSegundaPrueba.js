@@ -14,7 +14,7 @@ const diapositivas=[
         categoria: "Categoría: Misterio/Fantasía",
         titulo: "El susurro de las aguas",
         texto: "Donde el agua cubrió un pueblo, nació un misterio... y ahora os invita a descubrir la historia que hubo detrás de todo eso.",
-        enlaces: "PruebaPantano.html"
+        enlaces: "SegundaPrueba.html"
     },
     {
         fondo: "multimedia/imagenesMaría/FondoExorcismo.png",
@@ -22,7 +22,7 @@ const diapositivas=[
         categoria: "Categoría: Terror/Horror",
         titulo: "El exorcismo de Almansa",
         texto: "Lo que quedó a mitad no duerme...aún respira oculto, aguardando el momento de reclamar lo que una vez le fue negado.",
-        enlaces:"TerceraPrueba.JS"
+        enlaces:"TerceraPrueba.html"
     } 
 ];
 
